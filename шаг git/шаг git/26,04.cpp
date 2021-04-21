@@ -49,7 +49,7 @@ int main()
 	int **numbersArray;
 	int lengthArrayLine;//строка
 	int lengthArrayColumn;//столбец
-	int startDiapazon, endDiapazon;
+	int startDiapazon = 0, endDiapazon = 0;
 
 	int minNum = 0, maxNum = 0;
 	int coordinateMinNumLine = 0, coordinateMinNumColumn = 0;
@@ -74,11 +74,18 @@ int main()
 
 
 			//присвоение длины массива
-			//for (int i = 0; i < lengthArrayLine; i++)
-			//{
-				numbersArray/*[lengthArrayLine]*/ = new int*[lengthArrayColumn];
-				numbersArray[lengthArrayLine] = new int[lengthArrayColumn];
+		/*
+				numbersArray[ lengthArrayLine] = new int[lengthArrayColumn];
+			//	numbersArray[lengthArrayLine] = new int;
 
+				int(*arraySumDiagonal)[5] = new int[5][5];
+
+				*/
+			numbersArray = new int* [lengthArrayLine];
+			for (int i = 0; i < lengthArrayLine; i++)
+			{
+				numbersArray[i] = new int[lengthArrayColumn];
+			}
 
 
 			do {
@@ -103,6 +110,9 @@ int main()
 				}
 			}
 
+			searchMinNum(numbersArray, lengthArrayLine, lengthArrayColumn, minNum, coordinateMinNumLine, coordinateMinNumColumn);
+			searchMaxNum(numbersArray, lengthArrayLine, lengthArrayColumn, maxNum, coordinateMaxNumLine, coordinateMaxNumColumn);
+
 			//вывод
 			cout << "массив состоит из элементов" << endl;
 			for (int i = 0; i < lengthArrayLine; i++)
@@ -110,7 +120,7 @@ int main()
 				cout << i + 1 << ") ";
 				for (int j = 0; j < lengthArrayColumn; j++)
 				{
-					cout << numbersArray[i][j];
+					cout << numbersArray[i][j] <<" ";
 
 				}
 				cout << endl;
@@ -135,10 +145,6 @@ int main()
 		}
 		system("cls");
 	} while (true);
-
-
-
-
 
 	system("pause");
 	return 0;

@@ -1,0 +1,4 @@
+﻿  26,04.cpp
+c:\users\sasha\dropbox\мой пк (sasha-пк)\desktop\git test\шаг git\шаг git\26,04.cpp(47): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  шаг git.vcxproj -> C:\Users\sasha\Dropbox\Мой ПК (sasha-ПК)\Desktop\Git test\шаг git\Debug\шаг git.exe
+  шаг git.vcxproj -> C:\Users\sasha\Dropbox\Мой ПК (sasha-ПК)\Desktop\Git test\шаг git\Debug\шаг git.pdb (Partial PDB)
